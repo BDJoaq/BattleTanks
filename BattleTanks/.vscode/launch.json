@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "BattleTanks (Debug)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanks Win64 Debug Build",
+			"program": "D:\\Udemy Courses\\BattleTanks\\BattleTanks\\Binaries\\Win64\\UE4-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BattleTanks (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanks Win64 DebugGame Build",
+			"program": "D:\\Udemy Courses\\BattleTanks\\BattleTanks\\Binaries\\Win64\\UE4-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BattleTanks (Development)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanks Win64 Development Build",
+			"program": "D:\\Udemy Courses\\BattleTanks\\BattleTanks\\Binaries\\Win64\\UE4.exe",
+			"args": [
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BattleTanks (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanks Win64 Shipping Build",
+			"program": "D:\\Udemy Courses\\BattleTanks\\BattleTanks\\Binaries\\Win64\\UE4-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BattleTanks (Test)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanks Win64 Test Build",
+			"program": "D:\\Udemy Courses\\BattleTanks\\BattleTanks\\Binaries\\Win64\\UE4-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BattleTanksEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanksEditor Win64 Debug Build",
+			"program": "D:\\Unreal Engine\\UE_4.25\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"D:\\Udemy Courses\\BattleTanks\\BattleTanks\\BattleTanks.uproject"
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BattleTanksEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanksEditor Win64 DebugGame Build",
+			"program": "D:\\Unreal Engine\\UE_4.25\\Engine\\Binaries\\Win64\\UE4Editor-Win64-DebugGame.exe",
+			"args": [
+				"D:\\Udemy Courses\\BattleTanks\\BattleTanks\\BattleTanks.uproject"
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BattleTanksEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "BattleTanksEditor Win64 Development Build",
+			"program": "D:\\Unreal Engine\\UE_4.25\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"D:\\Udemy Courses\\BattleTanks\\BattleTanks\\BattleTanks.uproject"
+			],
+			"cwd": "D:\\Unreal Engine\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Unreal Engine\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "D:\\Unreal Engine\\UE_4.25\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"D:\\Udemy Courses\\BattleTanks\\BattleTanks\\BattleTanks.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "D:\\Unreal Engine\\UE_4.25"
+		}
+	]
+}
