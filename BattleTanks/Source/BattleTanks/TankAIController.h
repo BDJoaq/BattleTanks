@@ -4,9 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
-#include "Tank.h"
 #include "TankAIController.generated.h"
 
+
+class UProjectileFireComponent;
+class UTankAimingComponent;
 /**
  * 
  */
@@ -22,6 +24,7 @@ protected:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	ATank* GetControlledTank() const;
-	ATank* GetPlayerTank() const;
+	
+	UProjectileFireComponent* FiringComponent = nullptr;
+	UTankAimingComponent* AimingComponent = nullptr;
 };

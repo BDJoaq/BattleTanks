@@ -6,8 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
-
-class ATank;
+//class UProjectileFireComponent;
+class UTankAimingComponent;
 
 UCLASS()
 class BATTLETANKS_API ATankPlayerController : public APlayerController
@@ -19,9 +19,12 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
-public:
-	ATank* GetControlledTank() const;
 
+	UFUNCTION (BlueprintImplementableEvent)
+	void FoundAimingComponent (UTankAimingComponent* AimingComponentRef);
+
+
+public:
 	void AimAtCrosshair();
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 	FVector GetObjectHitLocation(FVector WorldDirection) const
@@ -34,5 +37,8 @@ public:
 
 	UPROPERTY(EditAnywhere);
 	float HitRange = 1000000;
+
+	UTankAimingComponent* AimingComponent = nullptr;
+	//UProjectileFireComponent* FiringComponent = nullptr;
 };
 

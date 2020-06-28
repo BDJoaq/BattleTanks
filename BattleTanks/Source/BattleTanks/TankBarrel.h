@@ -22,10 +22,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = Setup)
 	float ElevateSpeed = 20.f;
 
-	UPROPERTY(EditAnywhere, Category = Setup)
+	UPROPERTY(EditDefaultsOnly, Category = Setup)
 	float MaxPitch = 50;
 
-	UPROPERTY(EditAnywhere, Category = Setup)
+	UPROPERTY(EditDefaultsOnly, Category = Setup)
 	float MinPitch = 0;
 
 };

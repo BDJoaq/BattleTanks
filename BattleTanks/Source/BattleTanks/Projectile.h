@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Projectile.generated.h"
 
+class UProjectileFireComponent;
+
 UCLASS()
 class BATTLETANKS_API AProjectile : public AActor
 {
@@ -19,8 +21,12 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UProjectileFireComponent* ProjectileFireComponent = nullptr;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	void LaunchProjectile(float LaunchSpeed);
 
 };

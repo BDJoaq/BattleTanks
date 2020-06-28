@@ -1,10 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "TankPlayerController.h"
 #include "CollisionQueryParams.h"
 #include "Engine/World.h"
 #include "Engine/EngineTypes.h"
-#include "Tank.h"
-#include "TankPlayerController.h"
+#include "TankAimingComponent.h"
+//#include "ProjectileFireComponent.h"
 
 
 
@@ -12,12 +13,11 @@ void ATankPlayerController::BeginPlay()
 {
     Super::BeginPlay();
 
-    APawn* ControlledPawn = GetControlledTank();
+    AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
+   
 
-    if(ControlledPawn)
-    {
-        UE_LOG(LogTemp, Warning, TEXT("I control %s"), *ControlledPawn->GetName());
-    }
+    if(!AimingComponent){return;}
+    FoundAimingComponent(AimingComponent);
 
 }
 
@@ -26,27 +26,19 @@ void ATankPlayerController::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
-    
     AimAtCrosshair();
-
-
 }
 
-ATank* ATankPlayerController::GetControlledTank() const
-{
-    return Cast<ATank>(GetPawn());
-}
 
 void ATankPlayerController::AimAtCrosshair()
 {
-    if (!GetControlledTank()){return;}
+    if (!GetPawn()){return;}
     FVector HitLocation;
-
+ 
     if (GetSightRayHitLocation(HitLocation))
     {
-        GetControlledTank()->AimAt(HitLocation);
+        AimingComponent->AimAt(HitLocation);
     }
-
 }
 
 bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) const

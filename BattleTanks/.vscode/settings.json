@@ -2,6 +2,8 @@
 	"files.exclude": {
 		"D:/Udemy Courses/BattleTanks/BattleTanks/.vscode": true,
 		"D:/Udemy Courses/BattleTanks/BattleTanks/Content": true,
-		"D:/Udemy Courses/BattleTanks/BattleTanks/Intermediate": true
+		"D:/Udemy Courses/BattleTanks/BattleTanks/DerivedDataCache": true,
+		"D:/Udemy Courses/BattleTanks/BattleTanks/Intermediate": true,
+		"D:/Udemy Courses/BattleTanks/BattleTanks/Saved": true
 	}
 }
