@@ -6,6 +6,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "TankTurret.generated.h"
 
+
 /**
  * 
  */
@@ -20,5 +21,9 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = Setup)
 	float RotateSpeed = 20.f;
+
+
+protected:
+
 
 };

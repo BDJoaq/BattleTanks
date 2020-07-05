@@ -39,13 +39,13 @@ public:
 	bool IsBarrelMoving();
 
 
-	UPROPERTY(EditDefaultsOnly, Category = Firing)
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float LaunchSpeed = 10000;
 
 	UFUNCTION(BlueprintCallable)
 	void Fire ();
 
-	UPROPERTY (BlueprintReadOnly)
+	UPROPERTY (EditAnywhere, BlueprintReadOnly, Category = "Firing")
 	int32 MainAmmoCount = 3;
 
 private:
@@ -53,14 +53,14 @@ private:
 	UTankBarrel* Barrel = nullptr;
 	UTankTurret* Turret = nullptr;
 
-	UPROPERTY(EditDefaultsOnly, Category = Firing)
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
 	bool bCanFire = true;
 	float FireTime = -5.f;
 	FRotator DeltaRotator;
 
-	UPROPERTY(EditAnywhere, Category = Firing)
+	UPROPERTY(EditAnywhere, Category = "Firing")
 	float ReloadTime = 3.f;
 
 

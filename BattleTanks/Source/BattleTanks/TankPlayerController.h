@@ -40,5 +40,13 @@ public:
 
 	UTankAimingComponent* AimingComponent = nullptr;
 	//UProjectileFireComponent* FiringComponent = nullptr;
+
+private:
+	//Listening stuff down here
+
+	UFUNCTION()
+	void OnPossesedTankDeath();
+
+	virtual void SetPawn(APawn* InPawn) override;
 };
 

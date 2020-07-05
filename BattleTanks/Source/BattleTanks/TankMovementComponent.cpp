@@ -39,7 +39,6 @@ void UTankMovementComponent::IntendRotateClockwise(float Throw)
 {
     if (!LeftTrack || !RightTrack) {return;}
 
-    UE_LOG(LogTemp, Warning, TEXT("Trying to turn"));
     LeftTrack->GetThrottle(Throw);
     RightTrack->GetThrottle(-Throw);
 }

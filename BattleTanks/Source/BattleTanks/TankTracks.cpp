@@ -45,7 +45,6 @@ void UTankTracks::ApplySidewaysForce()
 void UTankTracks::GetThrottle (float Throttle)
 {
     CurrentThrottle += Throttle;
-    UE_LOG(LogTemp, Warning, TEXT("Made it here"));
 }
 
 

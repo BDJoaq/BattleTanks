@@ -5,6 +5,7 @@
 #include "Engine/World.h"
 #include "Engine/EngineTypes.h"
 #include "TankAimingComponent.h"
+#include "Tank.h"
 //#include "ProjectileFireComponent.h"
 
 
@@ -21,6 +22,24 @@ void ATankPlayerController::BeginPlay()
 
 }
 
+void ATankPlayerController::SetPawn(APawn* InPawn)
+{
+    Super::SetPawn(InPawn);
+
+    if (!InPawn) {return;}
+
+    ATank* PossesedTank = Cast<ATank>(InPawn);
+
+    PossesedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPossesedTankDeath);
+    
+}
+
+void ATankPlayerController::OnPossesedTankDeath()
+{
+    UE_LOG(LogTemp, Warning, TEXT("I am dead"));
+    StartSpectatingOnly();
+    //GetPawn()->DetachFromControllerPendingDestroy(); NOT NEEDED, StartSpectatingOnly() tankes care of this
+}
 
 void ATankPlayerController::Tick(float DeltaTime)
 {
@@ -75,7 +94,7 @@ FVector ATankPlayerController::GetObjectHitLocation(FVector WorldDirection) cons
         HitResult,
         StartLocation,
         ObjectHitLocation,
-        ECollisionChannel::ECC_Visibility
+        ECollisionChannel::ECC_Camera
     );
 
     return HitResult.Location;

@@ -27,4 +27,17 @@ public:
 	
 	UProjectileFireComponent* FiringComponent = nullptr;
 	UTankAimingComponent* AimingComponent = nullptr;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	float ClosestDistance = 4500.f;
+
+private:
+
+	UFUNCTION()
+	void OnPossesedTankDeath();
+
+
+	virtual void SetPawn(APawn* InPawn) override;
+	
+
 };
